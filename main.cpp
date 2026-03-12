@@ -82,40 +82,166 @@ using namespace std;
 ////Allocate();
 //}
 
-void PickBall(int* Ptr, int Size)
+//void PickBall(int* Ptr, int Size)
+//{
+//	srand(unsigned(time(NULL)));
+//	for (int i = 0; i < Size; i++)
+//	{
+//		Ptr[i] = i + 1;
+//	}
+//	// Swap
+//	int temp;
+//	for (int i = 0; i < Size; i++)
+//	{
+//		temp = Ptr[i];
+//		Ptr[i] = Ptr[(rand() % (Size))];
+//		Ptr[(rand() % (Size))] = Ptr[i];// Shuffle 해줌
+//	}
+//
+//	for (int i = 0; i < 6; i++)
+//	{
+//		cout << Ptr[i] << endl;
+//	}
+//
+//}
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void DrawMap(char* c, int size) // draw map and player start position
 {
-	srand(unsigned(time(NULL)));
-	for (int i = 0; i < Size; i++)
+	for (int i = 0; i < size * size; i++) // 배열 채워줌
 	{
-		Ptr[i] = i + 1;
+		if (i / size == 0) //위에칸 채우기
+		{
+			c[i] = '*';
+		}
+		else if ((i / size) >= size - 1)
+		{
+			c[i] = '*';
+		}
+		else if (i % size == 0)//왼쪽 칸 채우기
+		{
+			c[i] = '*';
+		}
+		else if ((i + 1) % size == 0)// 오른쪽 칸 채우기 
+		{
+			c[i] = '*';
+		}
+		else
+		{
+			c[i] = ' ';
+		}
 	}
-	// Swap
-	int temp;
-	for (int i = 0; i < Size; i++)
-	{
-		temp = Ptr[i];
-		Ptr[i] = Ptr[(rand() % (Size))];
-		Ptr[(rand() % (Size))] = Ptr[i];// Shuffle 해줌
-	}
-
-	for (int i = 0; i < 6; i++)
-	{
-		cout << Ptr[i] << endl;
-	}
-
+	c[size + 1] = 'p'; // 플레이어 시작 위치
 }
+
+void Playing(char* c, int size)// 출력 처리
+{
+	//출력 처리
+	for (int i = 0; i < size * size; i++)
+	{
+		cout << c[i];
+		if ((i + 1) % size == 0)
+		{
+			cout << endl;
+		}
+	}
+}
+
+void Move(char* c, int size) // 키 입력 받고 움직임 처리
+{
+	char s = ' ';
+	int currentposition = size + 1;
+	while (cin >> s) // 입력이 있으면 계속 진행
+	{
+		if (s == 'w') // 위로 움직임
+		{
+			if (c[currentposition - size] == '*')
+			{
+				cout << "위로 못감" << endl;
+			}
+			else
+			{
+				c[currentposition] = ' ';
+				currentposition -= size;
+				c[currentposition] = 'p';
+			}
+
+		}
+		else if (s == 's') //아래로 움직임
+		{
+			if (c[currentposition + size] == '*')
+			{
+				cout << "아래로 못감" << endl;
+			}
+			else
+			{
+				c[currentposition] = ' ';
+				currentposition += size;
+				c[currentposition] = 'p';
+			}
+		}
+		else if (s == 'a')
+		{
+			if (c[currentposition - 1] == '*')
+			{
+				cout << "왼쪽으로 못감" << endl;
+			}
+			else
+			{
+				c[currentposition] = ' ';
+				currentposition -= 1;
+				c[currentposition] = 'p';
+			}
+		}
+		else if (s == 'd')
+		{
+			if (c[currentposition + 1] == '*')
+			{
+				cout << "오른쪽로 못감" << endl;
+			}
+			else
+			{
+				c[currentposition] = ' ';
+				currentposition += 1;
+				c[currentposition] = 'p';
+			}
+		}
+		else
+		{
+			cout << "다시 입력해주세요" << endl;
+		}
+
+		Playing(c, size);
+	}
+}
+
+
+
+
 
 
 int main()
 {
-
-	int Size = 0;
-	cin >> Size;
-	int* Ptr = new int[Size];
-
-	PickBall(Ptr, Size);
-
-	delete[] Ptr;
-	Ptr = nullptr;
-	return 0;
+	//W,A,S,D로 움직임
+	int n;
+	cin >> n; // 11이면 0~10 11~21 22
+	char* c = new char[n * n]; //10 100까지 나오면 0~9, 10~ 19 90 ~ 99
+	DrawMap(c, n);
+	Move(c, n);
 }

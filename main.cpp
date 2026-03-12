@@ -244,4 +244,7 @@ int main()
 	char* c = new char[n * n]; //10 100까지 나오면 0~9, 10~ 19 90 ~ 99
 	DrawMap(c, n);
 	Move(c, n);
+
+	delete[] c;
+	c = nullptr;
 }

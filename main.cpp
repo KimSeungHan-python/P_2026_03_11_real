@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <random>
 
 using namespace std;
 
@@ -40,44 +41,81 @@ using namespace std;
 //	}
 //}
 
-void Allocate()
-{
-	int Num1;
-	cin >> Num1;
+//void Allocate()
+//{
+//	int Num1;
+//	cin >> Num1;
+//
+//	int* P = new int[Num1];
+//	for (int i = 0; i < Num1; i++)
+//	{
+//		P[i] = i + 1;
+//		cout << (P+i) << "의 값: "<< P[i] << endl;
+//	}
+//
+//	delete[] P;
+//	P = nullptr;
+//}
+//
+//int main()
+//{
+//	//char c[100];
+////char s1;
+////char s2;
+////cout << "문자열을 입력해주세요: ";
+////cin.getline(c, 100); // 공백이 있음
+//
+////cout << endl;
+////cout << "배열에 있는 글자: " << endl;
+////cin >> s1;
+////cout << "바꿀 글자: " << endl;
+////cin >> s2;
+////charcount(c);
+////charchange(c, s1, s2);
+//
+////char s3;
+////cout << "찾을 글자: ";
+////cin >> s3;
+////charfind(c, s3);
+//
+//
+////Allocate();
+//}
 
-	int* P = new int[Num1];
-	for (int i = 0; i < Num1; i++)
+void PickBall(int* Ptr, int Size)
+{
+	srand(unsigned(time(NULL)));
+	for (int i = 0; i < Size; i++)
 	{
-		P[i] = i + 1;
-		cout << (P+i) << "의 값: "<< P[i] << endl;
+		Ptr[i] = i + 1;
+	}
+	// Swap
+	int temp;
+	for (int i = 0; i < Size; i++)
+	{
+		temp = Ptr[i];
+		Ptr[i] = Ptr[(rand() % (Size))];
+		Ptr[(rand() % (Size))] = Ptr[i];// Shuffle 해줌
 	}
 
-	delete[] P;
-	P = nullptr;
+	for (int i = 0; i < 6; i++)
+	{
+		cout << Ptr[i] << endl;
+	}
+
 }
 
 
 int main()
 {
-	//char c[100];
-	//char s1;
-	//char s2;
-	//cout << "문자열을 입력해주세요: ";
-	//cin.getline(c, 100); // 공백이 있음
 
-	//cout << endl;
-	//cout << "배열에 있는 글자: " << endl;
-	//cin >> s1;
-	//cout << "바꿀 글자: " << endl;
-	//cin >> s2;
-	//charcount(c);
-	//charchange(c, s1, s2);
+	int Size = 0;
+	cin >> Size;
+	int* Ptr = new int[Size];
 
-	//char s3;
-	//cout << "찾을 글자: ";
-	//cin >> s3;
-	//charfind(c, s3);
+	PickBall(Ptr, Size);
 
-
-	Allocate();
+	delete[] Ptr;
+	Ptr = nullptr;
+	return 0;
 }

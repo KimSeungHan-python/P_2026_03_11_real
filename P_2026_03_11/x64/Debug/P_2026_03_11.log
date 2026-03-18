@@ -1,5 +1,20 @@
-﻿  UFSM.cpp
-  UState.cpp
-  UTransition.cpp
+﻿  Actor.cpp
+  Advertise.cpp
+  Ball.cpp
+  Camera.cpp
+  Character.cpp
+  GoalPost.cpp
+  Image.cpp
+  LongView.cpp
+  MiniMap.cpp
+  Player.cpp
+  Referee.cpp
+  ShoulderView.cpp
+  Spectator.cpp
+  Stadium.cpp
+  Team.cpp
+  Timer.cpp
+  UI.cpp
   Generating Code...
-  P_2026_03_11.vcxproj -> C:\Work\P_2026_03_11\x64\Debug\P_2026_03_11.exe
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Work\P_2026_03_11\x64\Debug\P_2026_03_11.exe : fatal error LNK1120: 1 unresolved externals

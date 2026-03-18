@@ -19,23 +19,43 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="UDestination.cpp" />
-    <ClCompile Include="UFloor.cpp" />
-    <ClCompile Include="UMonster.cpp" />
-    <ClCompile Include="UPlayer.cpp" />
-    <ClCompile Include="UPosition.cpp" />
-    <ClCompile Include="UWall.cpp" />
-    <ClCompile Include="UWorld.cpp" />
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="Advertise.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="GoalPost.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="LongView.h" />
+    <ClInclude Include="MiniMap.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Referee.h" />
+    <ClInclude Include="ShoulderView.h" />
+    <ClInclude Include="Spectator.h" />
+    <ClInclude Include="Stadium.h" />
+    <ClInclude Include="Team.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UDestination.h" />
-    <ClInclude Include="UFloor.h" />
-    <ClInclude Include="UMonster.h" />
-    <ClInclude Include="UPlayer.h" />
-    <ClInclude Include="UPosition.h" />
-    <ClInclude Include="UWall.h" />
-    <ClInclude Include="UWorld.h" />
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Advertise.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="GoalPost.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="LongView.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MiniMap.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Referee.cpp" />
+    <ClCompile Include="ShoulderView.cpp" />
+    <ClCompile Include="Spectator.cpp" />
+    <ClCompile Include="Stadium.cpp" />
+    <ClCompile Include="Team.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

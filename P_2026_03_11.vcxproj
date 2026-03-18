@@ -124,6 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="UFSM.cpp" />
+    <ClCompile Include="UState.cpp" />
+    <ClCompile Include="UTransition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UFSM.h" />
+    <ClInclude Include="UState.h" />
+    <ClInclude Include="UTransition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

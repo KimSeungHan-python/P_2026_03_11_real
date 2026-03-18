@@ -18,6 +18,25 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="UDestination.cpp" />
+    <ClCompile Include="UFloor.cpp" />
+    <ClCompile Include="UMonster.cpp" />
+    <ClCompile Include="UPlayer.cpp" />
+    <ClCompile Include="UPosition.cpp" />
+    <ClCompile Include="UWall.cpp" />
+    <ClCompile Include="UWorld.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UDestination.h" />
+    <ClInclude Include="UFloor.h" />
+    <ClInclude Include="UMonster.h" />
+    <ClInclude Include="UPlayer.h" />
+    <ClInclude Include="UPosition.h" />
+    <ClInclude Include="UWall.h" />
+    <ClInclude Include="UWorld.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -122,17 +141,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="UFSM.cpp" />
-    <ClCompile Include="UState.cpp" />
-    <ClCompile Include="UTransition.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="UFSM.h" />
-    <ClInclude Include="UState.h" />
-    <ClInclude Include="UTransition.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

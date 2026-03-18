@@ -18,24 +18,48 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UState.cpp">
+    <ClCompile Include="UDestination.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UTransition.cpp">
+    <ClCompile Include="UFloor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UFSM.cpp">
+    <ClCompile Include="UMonster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UWall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UState.h">
+    <ClInclude Include="UDestination.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UTransition.h">
+    <ClInclude Include="UFloor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UFSM.h">
+    <ClInclude Include="UMonster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UPosition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UWall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
